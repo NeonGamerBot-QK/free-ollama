@@ -68,6 +68,7 @@ for (const route of blocked_routes) {
 app.use(
   createProxyMiddleware({
     target: `http://localhost:11434/`,
+  changeOrigin: true,
   }),
 );
 
